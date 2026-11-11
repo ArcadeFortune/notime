@@ -1,0 +1,19 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/schedules/check-tasks.ts": {
+      "experimentalTriggers": [{ "type": "schedule/v1beta" }]
+    },
+    "api/queues/handle-tasks.ts": {
+      "experimentalTriggers": [
+        { "type": "queue/v2beta", "topic": "handle-task" }
+      ]
+    }
+  },
+  "schedules": {
+    "check-tasks": {
+      "schedule": "*/15 * * * *",
+      "function": "api/schedules/check-tasks"
+    }
+  }
+}

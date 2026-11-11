@@ -1,3 +1,5 @@
+# NotiMe
+
 ## Developing
 
 ```bash

@@ -6,18 +6,21 @@ User account registrations managed by either clerk or postgress tbd
 
 ## Feed
 
-All notifications show up here and they can be dismissed
-This is seperate from the channels.
+All notifications show up here and they can be dismissed This is seperate from
+the channels.
 
 ## Channels
 
-Notifications can only be created in channels which act as a grouping/categorizing mechanism.
+Notifications can only be created in channels which act as a
+grouping/categorizing mechanism.
 
-New users start with one channel "all notifications" which is undeletable, it's the root channel.
+New users start with one channel "all notifications" which is undeletable, it's
+the root channel.
 
 ## Add NotiTask
 
-- Select channel, defaults to current viewing one or "no channel" which only displays it in the root channel.
+- Select channel, defaults to current viewing one or "no channel" which only
+  displays it in the root channel.
 - Select task type, no default.
 - Next button to show task type specific configuration
 
@@ -25,6 +28,13 @@ New users start with one channel "all notifications" which is undeletable, it's 
 
 #### URL
 
-Types in a url that does not exist and once it returns something other than 404 then it would notify it. Polling rate is not changable
+Types in a url that does not exist and once it returns something other than 404
+then it would notify it. Polling rate is not changable
 
 - URL input, no default
+
+# Schedules
+
+Every x minutes a cron job like schedule runs to check for any polling related
+notification tasks. Then for each task it appends to a queue and the queue
+handles that.
