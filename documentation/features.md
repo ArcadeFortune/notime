@@ -11,22 +11,20 @@ the channels.
 
 ## Channels
 
-Notifications can only be created in channels which act as a
-grouping/categorizing mechanism.
-
-New users start with one channel "all notifications" which is undeletable, it's
-the root channel.
+Notifications can only be created in channels. Clicking a channel would show the
+tasks of the channel
 
 ## Add NotiTask
 
-- Select channel, defaults to current viewing one or "no channel" which only
-  displays it in the root channel.
+Always visible at the top right when viewing any channel.
+
+- Select channel, defaults to current viewing one or "create channel"
 - Select task type, no default.
 - Next button to show task type specific configuration
 
 ### Task Types
 
-#### URL
+#### Website availability
 
 Types in a url that does not exist and once it returns something other than 404
 then it would notify it. Polling rate is not changable
